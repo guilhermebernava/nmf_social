@@ -11,14 +11,14 @@ class CarouselImage extends StatefulWidget {
 }
 
 class _CarouselImageState extends State<CarouselImage> {
-  static const double offset = 355;
+  static const double offset = 365;
   late Timer timer;
 
   void _startTimer() {
     int index = 0;
-    timer = Timer.periodic(const Duration(seconds: 2), (Timer t) {
+    timer = Timer.periodic(const Duration(seconds: 10), (Timer t) {
       widget.controller.animateTo(offset * index,
-          duration: const Duration(seconds: 1), curve: Curves.decelerate);
+          duration: const Duration(seconds: 2), curve: Curves.decelerate);
       if (index > 3) {
         index = 0;
         return;
