@@ -16,6 +16,7 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text("LOGIN"),
@@ -29,8 +30,7 @@ class Login extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.only(
-                    right: MediaQuery.of(context).size.width * 0.45),
+                padding: EdgeInsets.only(right: mediaQuery.size.width * 0.45),
                 child: WelcomeTo(
                     fontSizeWelcome: 24, fontSizeTo: 36, to: "Rede Social"),
               ),
@@ -52,7 +52,7 @@ class Login extends StatelessWidget {
                         textInputType: TextInputType.emailAddress),
                     Padding(
                       padding: EdgeInsets.symmetric(
-                          vertical: MediaQuery.of(context).size.height * 0.03),
+                          vertical: mediaQuery.size.height * 0.03),
                       child: Input(
                           controller: passwordController,
                           ocultText: true,
@@ -74,11 +74,16 @@ class Login extends StatelessWidget {
                             emailController.text, passwordController.text);
                       },
                       title: "Enter",
+                      size: mediaQuery.size,
                     ),
                   ],
                 ),
               ),
-              DividerText(context, text: "OR"),
+              DividerText(
+                context,
+                text: "OR",
+                size: mediaQuery.size,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -87,16 +92,19 @@ class Login extends StatelessWidget {
                     context,
                     icon: FontAwesomeIcons.google,
                     onTap: () => "",
+                    size: mediaQuery.size,
                   ),
                   ButtonIcon(
                     context,
                     icon: FontAwesomeIcons.github,
                     onTap: () => "",
+                    size: mediaQuery.size,
                   ),
                   ButtonIcon(
                     context,
                     icon: FontAwesomeIcons.airbnb,
                     onTap: () => "",
+                    size: mediaQuery.size,
                   ),
                 ],
               )

@@ -44,6 +44,7 @@ class _ToggleButtonState extends State<ToggleButton> {
               text: widget.firstButtonText,
               color: AppColors.primary,
               selected: btn1,
+              size: size,
               onTap: () {
                 if (btn1) {
                   Navigator.pushNamed(context, widget.firstButtonRedirect);
@@ -65,6 +66,7 @@ class _ToggleButtonState extends State<ToggleButton> {
               text: widget.secondButtonText,
               color: AppColors.secondary,
               selected: btn2,
+              size: size,
               onTap: () {
                 if (btn2) {
                   Navigator.pushNamed(context, widget.secondButtonRedirect);

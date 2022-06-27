@@ -8,6 +8,7 @@ class ButtonIcon extends InkWell {
     Key? key,
     required VoidCallback onTap,
     required IconData icon,
+    required Size size,
   }) : super(
           key: key,
           onTap: onTap,
@@ -21,8 +22,8 @@ class ButtonIcon extends InkWell {
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(
-                vertical: MediaQuery.of(context).size.width * 0.05,
-                horizontal: MediaQuery.of(context).size.width * 0.08,
+                vertical: size.width * 0.05,
+                horizontal: size.width * 0.08,
               ),
               child: FaIcon(
                 icon,

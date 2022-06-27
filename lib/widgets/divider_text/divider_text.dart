@@ -7,6 +7,7 @@ class DividerText extends Row {
     BuildContext context, {
     Key? key,
     required String text,
+    required Size size,
     Color color = AppColors.white,
   }) : super(
           key: key,
@@ -15,12 +16,11 @@ class DividerText extends Row {
           children: [
             Container(
               height: 2,
-              width: MediaQuery.of(context).size.width * 0.27,
+              width: size.width * 0.27,
               color: AppColors.primary,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: MediaQuery.of(context).size.width * 0.03),
+              padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
               child: Text(
                 text.toUpperCase(),
                 style: GoogleFonts.outfit(
@@ -32,7 +32,7 @@ class DividerText extends Row {
             ),
             Container(
               height: 2,
-              width: MediaQuery.of(context).size.width * 0.27,
+              width: size.width * 0.27,
               color: AppColors.secondary,
             ),
           ],

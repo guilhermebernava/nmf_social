@@ -7,12 +7,13 @@ class CardImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
     return Padding(
-      padding: EdgeInsets.only(
-          bottom: MediaQuery.of(context).size.height * 0.05, right: 20),
+      padding:
+          EdgeInsets.only(bottom: mediaQuery.size.height * 0.05, right: 20),
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.8,
-        height: MediaQuery.of(context).size.height * 0.37,
+        width: mediaQuery.size.width * 0.8,
+        height: mediaQuery.size.height * 0.37,
         decoration: BoxDecoration(
           color: AppColors.grey,
           borderRadius: BorderRadius.circular(15.0),

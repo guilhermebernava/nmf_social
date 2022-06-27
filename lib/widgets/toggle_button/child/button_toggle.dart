@@ -10,12 +10,13 @@ class ButtonToggle extends InkWell {
     required Color color,
     required bool selected,
     required VoidCallback onTap,
+    required Size size,
   }) : super(
           onTap: onTap,
           key: key,
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.39,
-            height: MediaQuery.of(context).size.height * 0.06,
+            width: size.width * 0.39,
+            height: size.height * 0.06,
             decoration: BoxDecoration(
                 color: selected ? color : Colors.transparent,
                 border: Border.all(color: Colors.transparent),

@@ -26,7 +26,7 @@ class AlertDialogs {
                   'Oops!! something went wrong....',
                   style: GoogleFonts.outfit(
                     color: AppColors.white,
-                    fontSize: 16,
+                    fontSize: 18,
                   ),
                 ),
               ],

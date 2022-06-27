@@ -8,6 +8,7 @@ class Button extends InkWell {
     Key? key,
     required VoidCallback onTap,
     required String title,
+    required Size size,
   }) : super(
           key: key,
           onTap: onTap,
@@ -18,8 +19,8 @@ class Button extends InkWell {
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(
-                vertical: MediaQuery.of(context).size.height * 0.02,
-                horizontal: MediaQuery.of(context).size.width * 0.32,
+                vertical: size.height * 0.02,
+                horizontal: size.width * 0.32,
               ),
               child: Text(
                 title.toUpperCase(),
