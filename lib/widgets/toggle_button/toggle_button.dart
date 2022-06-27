@@ -36,7 +36,7 @@ class _ToggleButtonState extends State<ToggleButton> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(9),
         child: Row(
           children: [
             ButtonToggle(
@@ -58,7 +58,7 @@ class _ToggleButtonState extends State<ToggleButton> {
               },
             ),
             SizedBox(
-              width: size.width * 0.05,
+              width: size.width * 0.04,
             ),
             ButtonToggle(
               context,

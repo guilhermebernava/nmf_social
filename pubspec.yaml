@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   bordered_text: ^2.0.0
+  font_awesome_flutter: ^10.1.0
+  http:
+  http_interceptor:
 
 
 dev_dependencies:
